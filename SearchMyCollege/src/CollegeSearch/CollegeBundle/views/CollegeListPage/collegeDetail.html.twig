@@ -1,0 +1,119 @@
+{% extends 'CollegeSearchCollegeBundle::layout.html.twig' %}
+
+{% block title %}{{ colDetail.name }} list{% endblock%}
+
+{% block body %}
+
+	<div id="container">
+		<div id="img_n_add">
+			<img class="largeimg" alt="{{ colDetail.name }} not found" src="{{ asset(['images/', colDetail.photo]|join) }}">
+			<div class="add">
+				<h1 class="title">{{ colDetail.name }}</h1>
+				<div class="icongrp">
+				<img alt="phone icon" src="{{ asset('images/address.jpg') }}" class="icon">
+				<address class="icontxt">{{ colDetail.address }}</address>
+				</div>
+				<div class="icongrp">
+				<img alt="phone icon" src="{{ asset('images/phone.jpg') }}" class="icon">
+				<p class="icontxt">{{ colDetail.phone }}</p>
+				</div>
+				<div class="icongrp">
+				<img alt="email icon" src="{{ asset('images/email.png') }}" class="icon">
+				<p class="icontxt"><a href="#">{{ colDetail.email }}</a></p>
+				</div>
+				<div class="icongrp">
+				<img alt="web url" src="{{ asset('images/url.jpg') }}" class="icon">
+				<p class="icontxt"><a href="http://{{ colDetail.url }}">{{ colDetail.url }}</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="about">
+			<h3>About College:</h3>
+			<aside id="aside">{{ colDetail.info }}</aside>
+			<p id="readMore"><b>Read more..</b></p>
+			<button id="disabled"><img alt="close_button" src="{{ asset('images/Close.png') }}" height="20px" width="20px"></button>
+		</div>
+		<div class="about">
+			<h3>Key-facts:</h3>
+			<p><b>Courses offered:</b> {{ colDetail.courses }}</p>
+			<p><b>Fees:</b> Rs.{{ colDetail.fees }}</p>
+		</div>
+		<div class="about">
+			<h3 id="applyNow">Apply now</h3>
+			<div id="form">
+				<form action="#" method="post" {{ form_enctype(applyNowform) }} class="formApply">
+				
+					<div class="note"><span><b><i>NOTE:</i></b></span> The information submitted through this form is directly sent to college's admission department. We are not responsible for providing admission nor is the information stored with us.</div>
+    				<p class="section-title"><b>Personal Details:</b></p>
+    					<div class="form-section">
+    						{{ form_row(applyNowform.firstName) }}
+    						{{ form_row(applyNowform.lastName) }}
+    						{{ form_row(applyNowform.addressLine1) }}
+    						{{ form_row(applyNowform.addressLine2) }}
+    						<div class="large-div">
+    							{{ form_row(applyNowform.city) }}
+    						</div>
+    						<div class="small">
+    							{{ form_row(applyNowform.zipcode) }}
+    						</div>
+    						<div class="left-select">
+    							{{ form_row(applyNowform.dateOfBirth) }}
+    						</div>
+    						<div class="right-select">
+    							{{ form_row(applyNowform.gender) }}
+    						</div>
+    						<div class="large-div">
+    							{{ form_row(applyNowform.emailID) }}
+    						</div>
+    						<div class="small">
+    							{{ form_row(applyNowform.contactNo) }}
+    						</div>
+    					</div>
+    				<p class="section-title"><b>S.S.C Details:</b></p>
+    					<div class="form-section">
+    						<p class="section-subnote">Applicants must be able to produce all original certificates and 2 attestation copies during the time of admission.</p>
+    						<div class="large-div">
+    							{{ form_row(applyNowform.universityName) }}
+    						</div>
+    						
+    							{{ form_row(applyNowform.passingYear) }}
+    						<div class="left-select">
+    							{{ form_row(applyNowform.classSecured) }}
+    						</div>
+    						<div class="smallmarks">
+    							{{ form_row(applyNowform.marksSecured) }}
+    						</div>
+    					</div>
+    				<p class="section-title"><b>Select Course:</b></p>
+    					<div class="form-section">
+    						{{ form_row(applyNowform.course) }}
+    					</div>
+    				<p class="section-subnote">By clicking on apply button I agree that the information provided by me is correct to the best of my knowledge.</p>
+    				{{ form_row(applyNowform.Apply) }}
+    				<img alt="close_button" src="{{ asset('images/Close.png') }}" height="20px" width="20px" id="formClose">
+    			</form>
+			</div>
+		</div>
+		<div class="about">
+			<h3>Comments</h3>
+			<div class="previous-comments">
+				{% include 'CollegeSearchCollegeBundle:Comment:index.html.twig' with { 'comments': comments } %}
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+	
+	{% block javascripts %}
+		{{ parent() }}
+	
+		<script> 
+   			jQuery(document).ready(function ($) {
+   				$('#readMore').xtendBox();
+   				$('#disabled').reduceBox();
+   				$('#applyNow').toggleForm();
+   				$('#formClose').slideUpForm();
+    		});
+		</script>
+	{% endblock %}
+		{#$(document).ready(function () {   .about div .formApply div.small-div input{width:150px;}
+.about div .formApply div.small-div label {width:100px};	   #}

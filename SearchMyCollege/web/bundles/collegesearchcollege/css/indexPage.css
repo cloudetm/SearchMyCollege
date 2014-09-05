@@ -1,0 +1,7 @@
+#container {margin-top:30px; margin-bottom:30px;}
+#title {font-size:30px; font-weight:300; padding:5px,5px; margin:10px 17px 15px;position:relative}
+#categoryList {margin-bottom:5px; clear:both; display:block;}
+.category {margin:10px; float:left; position:relative; height:277px; width:265;}
+.category .img {width:235px; height:235px; position:relative; overflow:hidden;}
+.category .img_name {width: 235px; text-align:center; font-size:18px; font-weight:400; margin-top:4px; text-overflow:ellipsis; padding-top:10px; padding-bottom:10px; background-color:#C4AE96}
+.category:hover {padding:5px; border-style:double; box-shadow: 10px 4px 5px #888888;}

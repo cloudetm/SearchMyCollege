@@ -1,0 +1,24 @@
+
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+   {# {% stylesheets
+    'CollegeSearchCollegeBundle/Resources/css/*'  %} #}
+	<link href="{{ asset('bundles/CollegeSearchCollege/css/allForms.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('bundles/CollegeSearchCollege/css/collegeDetails.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('bundles/CollegeSearchCollege/css/indexPage.css') }}" type="text/css" rel="stylesheet" />
+	{# <link href="{{ asset_url }}" rel="stylesheet" media="baseTemplate"/>
+	{% endstylesheets %} #}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{# {% javascripts '@CollegeSearchCollegeBundle/Resources/public/js/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %} #}
+	<script type="text/javascript" src="{{ asset('bundles/CollegeSearchCollege/js/collegeDetail.js') }}"></script>
+{% endblock %}
+
+
+

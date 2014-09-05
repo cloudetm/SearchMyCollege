@@ -1,0 +1,7 @@
+parameters:
+#    college_search_college.example.class: CollegeSearch\CollegeBundle\Example
+
+services:
+#    college_search_college.example:
+#        class: %college_search_college.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

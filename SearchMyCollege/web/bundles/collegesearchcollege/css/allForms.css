@@ -1,0 +1,37 @@
+.blogger-notice { text-align: center; padding: 10px; background: #DFF2BF; border: 1px solid; color: #4F8A10; margin-bottom: 10px; }
+form.contactform { font-size: 16px; }
+form.contactform div { clear: left; margin-bottom: 10px; }
+form.contactform label { float: left; margin-right: 10px; text-align: right; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+form.contactform input[type="text"],
+form.contactform input[type="email"]
+    { width: 500px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form.contactform textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
+form.contactform input[type="submit"] { margin-left: 110px; width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form.contactform ul li { color: #ff0000; margin-bottom: 5px;}
+
+.about div .formApply  {width:700px; background-color:#8A5C2E; margin:0px 50px; padding:10px; box-shadow:10px 10px 15px;}
+.about div .section-title {font-size:20px; margin:10px 30px;}
+.about div .formApply div {margin-bottom:15px; padding:10px; }
+.about div .note, .form-section  {border:1px solid #ffffff; border-radius:5px; margin:4px; padding:10px; background-color:#AD8D6D;}
+.about div .note, .section-subnote {font-size:14px; font-color:#ffffff;}
+.about div .formApply label {float:left; font-size:16px; font-weight:bold; width:200px; margin-right:10px;}
+.about div .formApply input[type="text"], 
+.about div .formApply input[type="email"] {width:600px; font-size:14px; height:20px; padding:4px;}
+.about div .formApply select {height:30px; padding:4px;}
+.about div .formApply div.large-div {float:left; width:370px; padding-left:0px; margin-right:70px;}
+.about div .formApply div.large-div input{width:350px;}
+.about div .formApply div.large-div label {width:150px};
+.about div .formApply div.small, div.smallmarks {width:170px;}
+.about div .formApply div.small input {width:150px;}
+.about div .formApply div.smallmarks input {width:50px;}
+.about div .formApply div.small label {width:115px;}
+.about div .formApply div.smallmarks label {width:115px;}
+.about div .formApply div.left-select {width:340px; padding-left:0px; float:left; margin-right:99px; margin-bottom:0px; padding-bottom:0px;}
+.about div .formApply div.left-select #ApplyNow_dateOfBirth {padding-top:0px;}
+.about div .formApply div.left-select label {width:110px;}
+
+.about div .formApply div.right-select {padding-left:0px;}
+.about div .formApply div.right-select label {width:60px; padding:0px;}
+.about div .formApply button[type="submit"] {position:relative; left:240px; width: 200px; line-height: 26px; font-size: 20px; min-height: 26px; cursor: pointer;}
+.about div .formApply #formClose {height: 20px; width: 20px; background-color: transparent; border-color: transparent; cursor: pointer; float:right; position:relative; bottom:25px;}
+

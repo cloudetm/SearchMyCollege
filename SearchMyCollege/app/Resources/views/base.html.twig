@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Home{% endblock %}-SrchMyCollege</title>
+        {% block stylesheets %}
+        	<link href="{{ asset('css/baseTemplate.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+        
+        
+    </head>
+    <body>
+    	<div id="site-header">
+    	<div id="site-logo">
+    	<a href="{{ path('college_search_college_homepage') }}" title="Srch My College Homepage"><img alt="SrchMyCollege logo" src="{{ asset('images/SrchMyCollege_logo.jpg') }}" width="110" height="58"></a>
+    	</div>
+    		{% block navigation %}
+    			<nav>
+    				<ul class="navigation">
+    					<li><a href="{{ path('college_search_college_homepage') }}">Home</a></li>
+    					<li><a href="{{ path('college_search_college_aboutpage') }}">About us</a></li>
+    					<li><a href="{{ path('college_search_college_contactpage') }}">Contact</a></li>
+    				</ul>
+    			</nav>
+    		{% endblock %}
+    	</div>
+    	<section id="site-body">
+    		{% block body %}{% endblock %}	
+    	</section>
+    	<div id="site-footer">
+    		{% block footer %}
+    			All Rights Reserved. Powered by <a href="#"><b>Sailee Nachankar</b></a>.
+    		{% endblock %}
+    	</div>
+    	
+        {% block javascripts %}
+        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        {% endblock %}
+        
+    </body>
+</html>

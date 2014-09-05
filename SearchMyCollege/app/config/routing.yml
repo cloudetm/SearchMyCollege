@@ -1,0 +1,4 @@
+college_search_college:
+    resource: "@CollegeSearchCollegeBundle/Resources/config/routing.yml"
+    prefix:   /
+

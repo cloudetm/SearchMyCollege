@@ -1,0 +1,39 @@
+{# src/CollegeSearch/CollegeBundle/Resources/views/HomePage/index.html.twig #}
+{% extends 'CollegeSearchCollegeBundle::layout.html.twig' %}
+
+    
+{% block body %} 
+	<div id="container">
+		<div id="title">
+			College Categories
+		</div>
+		<div id="categoryList">
+		
+			<div class="category">
+				<div class="img">
+				<a href="{{ path('college_search_college_collegeList_showListpage', { 'category':"Junior College" }) }}"><img alt="Junior colleges" src="{{ asset('images/junior_coll.jpg') }}" width="235px" height="235px"></a>
+				</div>
+				<div class="img_name">
+					Junior Colleges
+				</div>
+			</div>
+			<div class="category">
+				<div class="img">
+				<a href="{{ path('college_search_college_collegeList_showListpage', { 'category':"Engineering College" }) }}"><img alt="Engineering colleges" src="{{ asset('images/engineering_coll.jpg') }}" width="235px" height="235px"></a>
+				</div>
+				<div class="img_name">
+					Engineering Colleges
+				</div>
+			</div>
+			<div class="category">
+				<div class="img">
+				<a href="{{ path('college_search_college_collegeList_showListpage', { 'category':"Medical College" }) }}"><img alt="Medical colleges" src="{{ asset('images/medical_coll.jpg') }}" width="235px" height="235px"></a>
+				</div>
+				<div class="img_name">
+					Medical Colleges
+				</div>
+			</div>
+			
+		</div>
+	</div>
+{% endblock %}

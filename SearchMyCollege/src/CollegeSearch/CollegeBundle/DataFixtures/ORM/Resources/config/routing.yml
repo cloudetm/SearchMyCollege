@@ -1,0 +1,30 @@
+college_search_college_homepage:
+    pattern:  /
+    defaults: { _controller: "CollegeSearchCollegeBundle:HomePage:index" }
+    requirements:
+        _method:  GET
+    
+college_search_college_aboutpage:
+    pattern:  /about
+    defaults: { _controller: "CollegeSearchCollegeBundle:HomePage:about" }
+    requirements:
+        _method:  GET
+
+college_search_college_contactpage:
+    pattern:  /contact
+    defaults: { _controller: "CollegeSearchCollegeBundle:HomePage:contact" }
+    requirements:
+        _method:  GET|POST
+        
+college_search_college_collegeList_showListpage:
+    pattern:  /{category}
+    defaults: { _controller: "CollegeSearchCollegeBundle:CollegeListPage:show" }
+    requirements:
+        _method:  GET
+        
+college_search_college_collegeList_collegeDetailpage:
+    pattern:  /{category}/{id}
+    defaults: { _controller: "CollegeSearchCollegeBundle:CollegeListPage:collegeDetail" }
+    requirements:
+        _method:  GET|POST
+        id:     \d+

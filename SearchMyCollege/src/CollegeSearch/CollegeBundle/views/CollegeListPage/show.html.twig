@@ -1,0 +1,25 @@
+{% extends 'CollegeSearchCollegeBundle::layout.html.twig' %}
+
+{% block title %}{{ category }} list{% endblock%}
+
+{% block body %}
+	<div id="container">
+	<div id="flow"><a href="{{ path('college_search_college_homepage') }}">Home</a>->{{ category }} List</div>
+	{% for item in list %}
+	<article class="article">
+	<a title="View site" href="{{ path('college_search_college_collegeList_collegeDetailpage', {'id':item.id, 'category':item.category}) }}"><img alt="{{ item.name }}" src="{{ asset(['images/', item.photo]|join) }}"></a>
+			
+			<h1><a href="{{ path('college_search_college_collegeList_collegeDetailpage', {'id':item.id, 'category':item.category}) }}">{{ item.name }}</a></h1>
+			
+			{#<a title="View site" href="{{ item.url }}"><img alt="{{ item.name }}" src="{{ asset(['images/', item.photo]|join) }}"></a> #}
+			<div class="courses-tag">
+				<p><b>City:</b> {{ item.city }}</p>
+				<p><b>Courses:</b> {{ item.courses }}</p>
+			</div>
+	</article>
+	{% else %}
+		<p>Sorry, there are no college details available at the moment.</p>
+	{% endfor %}
+	</div>
+	
+{% endblock %}
